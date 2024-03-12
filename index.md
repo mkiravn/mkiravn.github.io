@@ -1,4 +1,4 @@
-# Welcome!
+## Welcome!
 
 Hello! I am a PhD student in the [Novembre Lab](http://jnpopgen.org/) at the University of Chicago program [Department of Human Genetics](https://genes.uchicago.edu/). Prior to that, I completed my MSc in Bioinformatics at the University of Copenhagen, where I joined the [Racimo Lab](https://sites.google.com/site/fernandoracimo/). Even before that, I studied Natural Sciences at the University of Cambridge, in King's College.
 
