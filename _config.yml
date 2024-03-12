@@ -1,0 +1,10 @@
+# Site settings
+title: Mariadaria (Marida) K. Ianni-Ravn
+author:
+  name: Marida Ianni-Ravn
+  email: mariadaria@gmail.com
+description: "Personal website."
+
+# Build settings
+remote_theme: jekyll/minima
+logo: Marida.jpg
