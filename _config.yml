@@ -8,3 +8,4 @@ description: PhD Candidate in Human Genetics at The University of Chicago
 # Build settings
 remote_theme: jekyll/minima
 logo: Marida.jpeg
+background-image: url('illustration-3.png');
