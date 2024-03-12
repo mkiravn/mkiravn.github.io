@@ -4,7 +4,8 @@ Hello! I am a PhD student in the [Novembre Lab](http://jnpopgen.org/) at the Uni
 
 I am broadly interested in using statistical tools and population genetics to study the distribution of complex traits in space and time. I also aim to study the intricate relationship between genes and the environment in the modern world, with the hope to make genetic prediction more equitable and accurate. I am also passionate about scientific communication and illustration, and hope to use this platform to share some beautiful science!
 
-* [Research blog](https://mianniravn.github.io/blog)
-* [CV](https://mianniravn.github.io/cv)
+* [Research blog](https://mkiravn.github.io/blog)
+* [CV](https://mkiravn.github.io/cv)
+* [illustrations](https://mkiravn.github.io/illustration)
 
 **Feel free to contact me at:** mianniravn@uchicago.edu
