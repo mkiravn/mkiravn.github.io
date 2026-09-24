@@ -1,22 +1,30 @@
 /* ---------- Tokens ---------- */
+/* Palette: Sanzo Wada, Dictionary of Colour Combinations no. 143 —
+   Blue #006eb8, Lilac #b984af, Warm Gray #a1a39a. */
 :root {
-  --paper: #fcfbf9;
-  --band: #f1f2f6;
-  --band-edge: #dddfe7;
-  --contour: #c6cad8;
+  --paper: #fcfbfa;
+  --band: #f2f1ef;
+  --band-edge: #e0dfdb;
+  --contour: #cfcfc8;
 
-  --ink: #161a22;
-  --body: #454a54;
-  --muted: #6e7378;
-  --faint: #9aa0a6;
-  --hair: #e5e5e0;
+  --ink: #1b1c1a;
+  --body: #4a4a45;
+  --muted: #76766f;
+  --faint: #a1a39a;
+  --hair: #e8e7e3;
 
-  --accent: #3b4e8c;
-  --accent-dark: #2d3b6e;
-  --accent-bg: #e3e6f0;
+  /* Wada's Blue is ~4.2:1 on white, just under the 4.5:1 floor for body text,
+     so --accent-fill is used only where contrast does not apply. */
+  --accent: #00588f;
+  --accent-dark: #00436d;
+  --accent-fill: #006eb8;
+  --accent-tint: #cfe1ef;
 
-  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --tag-bg: #f0e6ee;
+  --tag-text: #6b3f63;
+
+  --sans: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Space Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   --measure: 760px;
   --gutter: 88px;
@@ -44,15 +52,15 @@ a:hover { color: var(--accent-dark); }
 
 .skip-link {
   position: absolute; left: -9999px; top: 0;
-  background: var(--accent); color: #fff; padding: 10px 16px; z-index: 10;
-  font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
+  background: var(--accent-fill); color: #fff; padding: 10px 16px; z-index: 10;
+  font-family: var(--mono); font-size: 12px; letter-spacing: .07em; text-transform: uppercase;
 }
 .skip-link:focus { left: 0; color: #fff; }
 
 .mono {
   font-family: var(--mono);
   font-size: 11px;
-  letter-spacing: .1em;
+  letter-spacing: .07em;
   text-transform: uppercase;
   color: var(--faint);
 }
@@ -93,11 +101,11 @@ a:hover { color: var(--accent-dark); }
 .tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .tags li {
   font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: .08em;
+  font-size: 10px;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  background: var(--accent-bg);
-  color: var(--accent-dark);
+  background: var(--tag-bg);
+  color: var(--tag-text);
   padding: 5px 10px;
   border-radius: 2px;
 }
@@ -128,7 +136,7 @@ a:hover { color: var(--accent-dark); }
 .site-nav a {
   font-family: var(--mono);
   font-size: 11px;
-  letter-spacing: .12em;
+  letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--muted);
   border-bottom: 2px solid transparent;
@@ -144,8 +152,8 @@ section { padding: 34px 0 6px; scroll-margin-top: 16px; }
 .section-title {
   font-family: var(--mono);
   font-size: 11px;
-  font-weight: 500;
-  letter-spacing: .16em;
+  font-weight: 700;
+  letter-spacing: .13em;
   text-transform: uppercase;
   color: var(--accent);
   margin: 0 0 18px;
@@ -158,8 +166,8 @@ section { padding: 34px 0 6px; scroll-margin-top: 16px; }
 .subhead {
   font-family: var(--mono);
   font-size: 10.5px;
-  font-weight: 500;
-  letter-spacing: .14em;
+  font-weight: 700;
+  letter-spacing: .11em;
   text-transform: uppercase;
   color: var(--faint);
   margin: 22px 0 4px;
@@ -169,7 +177,7 @@ section { padding: 34px 0 6px; scroll-margin-top: 16px; }
 p { margin: 0 0 12px; max-width: 64ch; color: var(--body); }
 p:last-child { margin-bottom: 0; }
 
-.prose a { border-bottom: 1px solid var(--accent-bg); }
+.prose a { border-bottom: 1px solid var(--accent-tint); }
 .prose a:hover { border-bottom-color: var(--accent); }
 
 /* ---------- Entry rows ---------- */
@@ -185,10 +193,10 @@ p:last-child { margin-bottom: 0; }
 .entry:first-child { border-top: none; }
 
 .entry-aside { padding-top: 1px; }
-.entry-year { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: var(--ink); }
+.entry-year { font-family: var(--mono); font-size: 11px; letter-spacing: .05em; color: var(--ink); }
 
 .entry-title { font-size: 15.5px; font-weight: 500; line-height: 1.45; margin: 0 0 3px; color: var(--ink); max-width: none; }
-.entry-title a { color: var(--ink); border-bottom: 1px solid var(--accent-bg); }
+.entry-title a { color: var(--ink); border-bottom: 1px solid var(--accent-tint); }
 .entry-title a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 .entry-meta { font-size: 13.5px; line-height: 1.55; color: var(--muted); margin: 0; max-width: none; }
@@ -200,15 +208,15 @@ p:last-child { margin-bottom: 0; }
   display: inline-block;
   font-family: var(--mono);
   font-size: 11px;
-  letter-spacing: .12em;
+  letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--paper);
-  background: var(--accent);
+  background: var(--accent-fill);
   padding: 12px 20px;
   border-radius: 2px;
   transition: background .15s ease;
 }
-.button-link:hover { background: var(--accent-dark); color: var(--paper); }
+.button-link:hover { background: var(--accent); color: var(--paper); }
 
 /* ---------- Footer ---------- */
 footer {
@@ -221,14 +229,14 @@ footer {
 .footer-links a {
   font-family: var(--mono);
   font-size: 11px;
-  letter-spacing: .12em;
+  letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--accent);
   border-bottom: 1px solid transparent;
   padding-bottom: 2px;
 }
 .footer-links a:hover { color: var(--ink); border-bottom-color: var(--accent); }
-.colophon { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin: 18px 0 0; }
+.colophon { font-family: var(--mono); font-size: 10px; letter-spacing: .05em; text-transform: uppercase; color: var(--faint); margin: 18px 0 0; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {

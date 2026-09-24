@@ -18,7 +18,7 @@ favicon.png
 Open `index.html` and edit it directly, then commit to `gh-pages`. Pages redeploys
 within a minute or so.
 
-Publications, talks, awards and service entries all share the same markup:
+Publications, talks, awards and volunteering entries all share the same markup:
 
 ```html
 <li class="entry">
@@ -48,10 +48,9 @@ sips -s format jpeg -s formatOptions 82 -Z 500 source.png --out profile.jpg
 
 ## Colours and type
 
-Every colour is a custom property in the `:root` block of `css/main.css`. The
-palette is indigo (`--accent: #3b4e8c`) on near-white paper, with IBM Plex Sans
-for text and IBM Plex Mono for metadata. Changing `--accent` and `--accent-bg`
-retints the whole page.
+Every colour is a custom property in the `:root` block of `css/main.css`. The palette is
+Sanzo Wada combination 143 (Blue, Lilac, Warm Gray) on near-white paper, with IBM
+Plex Sans for text and IBM Plex Mono for metadata.
 
 The contour lines behind the header are an inline SVG in `index.html`; their
 stroke colour is hardcoded to match `--contour`.
