@@ -1,0 +1,65 @@
+/* Studio page. Extends css/main.css; only the gallery-specific rules live here. */
+
+.masthead-inner { align-items: flex-start; }
+.affiliation a { color: var(--faint); border-bottom: 1px solid transparent; }
+.affiliation a:hover { color: var(--accent); border-bottom-color: var(--accent-tint); }
+
+/* Masonry-ish columns: plates keep their own aspect ratio and the column
+   balances them, which suits a mix of portrait and landscape scans. */
+.plates {
+  column-count: 3;
+  column-gap: 14px;
+  margin-top: 4px;
+}
+
+.plate {
+  margin: 0 0 14px;
+  break-inside: avoid;
+  display: block;
+}
+
+.plate a {
+  display: block;
+  border-bottom: none;
+  background: var(--band);
+}
+
+.plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--band-edge);
+  transition: opacity .15s ease;
+}
+.plate a:hover img,
+.plate a:focus-visible img { opacity: .82; }
+
+/* Exhibition statement */
+.exh-meta { margin: 0 0 14px; color: var(--faint); }
+
+.statement {
+  margin: 0;
+  padding: 0 0 0 20px;
+  border-left: 3px solid var(--accent-tint);
+  max-width: 62ch;
+}
+.statement p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--body);
+}
+.statement p:first-child::before { content: "\201C"; }
+.statement p:last-child::after { content: "\201D"; }
+
+@media (max-width: 860px) {
+  .plates { column-count: 2; }
+}
+
+@media (max-width: 520px) {
+  .plates { column-count: 1; }
+  .statement { padding-left: 14px; }
+}
+
+@media print {
+  .plates { column-count: 2; }
+}

@@ -46,6 +46,18 @@ committing — the original was 21 MB, which made the page unusable on mobile:
 sips -s format jpeg -s formatOptions 82 -Z 500 source.png --out profile.jpg
 ```
 
+## The studio page
+
+`art/` is an unlisted gallery of drawing and painting. It is deliberately quiet:
+`noindex, nofollow` in the head, absent from `sitemap.xml`, and reached only by a
+`rel="nofollow"` footer link on the main page. It is not secret — anyone with the
+URL can read it — but search engines are told to leave it alone, and the artist
+identity is deliberately not declared in the JSON-LD `sameAs` list.
+
+Images live in `art/img/`, resized to 1400px on the long edge. Layout is CSS
+columns, so a plate keeps its own aspect ratio; add one by copying an existing
+`figure.plate` and setting real `width`/`height` to avoid layout shift.
+
 ## Search visibility
 
 `robots.txt` and `sitemap.xml` sit in the repository root, and `index.html`
