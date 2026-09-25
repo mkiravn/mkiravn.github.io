@@ -54,6 +54,9 @@ sips -s format jpeg -s formatOptions 82 -Z 500 source.png --out profile.jpg
 URL can read it — but search engines are told to leave it alone, and the artist
 identity is deliberately not declared in the JSON-LD `sameAs` list.
 
+The page is images only — no intro text, no exhibition statement. Both were
+removed deliberately; the statement text is in git history if it is wanted back.
+
 Images live in `art/img/`, resized to 1400px on the long edge. Layout is CSS
 columns, so a plate keeps its own aspect ratio; add one by copying an existing
 `figure.plate` and setting real `width`/`height` to avoid layout shift.

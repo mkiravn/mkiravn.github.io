@@ -44,30 +44,12 @@
 /* Hidden until a date is known, so undated plates show nothing rather than a gap. */
 .plate-date:empty { display: none; }
 
-/* Exhibition statement */
-.exh-meta { margin: 0 0 14px; color: var(--faint); }
-
-.statement {
-  margin: 0;
-  padding: 0 0 0 20px;
-  border-left: 3px solid var(--accent-tint);
-  max-width: 62ch;
-}
-.statement p {
-  font-size: 15.5px;
-  line-height: 1.7;
-  color: var(--body);
-}
-.statement p:first-child::before { content: "\201C"; }
-.statement p:last-child::after { content: "\201D"; }
-
 @media (max-width: 860px) {
   .plates { column-count: 2; }
 }
 
 @media (max-width: 520px) {
   .plates { column-count: 1; }
-  .statement { padding-left: 14px; }
 }
 
 @media print {
