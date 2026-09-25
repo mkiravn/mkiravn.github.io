@@ -46,11 +46,21 @@ committing — the original was 21 MB, which made the page unusable on mobile:
 sips -s format jpeg -s formatOptions 82 -Z 500 source.png --out profile.jpg
 ```
 
+## Search visibility
+
+`robots.txt` and `sitemap.xml` sit in the repository root, and `index.html`
+carries a JSON-LD `Person` block listing both name forms plus `sameAs` links to
+the Scholar, GitHub, X and UChicago profiles. If you add a profile elsewhere,
+add it to `sameAs` too — that is how Google connects them to this page.
+
+Keep the string "Marida" on the page. It is the name most people search for,
+and the site went unindexed partly because only "Mariadaria" appeared.
+
 ## Colours and type
 
 Every colour is a custom property in the `:root` block of `css/main.css`. The palette is
-Sanzo Wada combination 143 (Blue, Lilac, Warm Gray) on near-white paper, with IBM
-Plex Sans for text and IBM Plex Mono for metadata.
+Sanzo Wada combination 143 (Blue, Lilac, Warm Gray) on near-white paper, with Space
+Grotesk for text and Space Mono for metadata.
 
 The contour lines behind the header are an inline SVG in `index.html`; their
 stroke colour is hardcoded to match `--contour`.
