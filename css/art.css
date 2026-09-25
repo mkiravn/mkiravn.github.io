@@ -34,6 +34,16 @@
 .plate a:hover img,
 .plate a:focus-visible img { opacity: .82; }
 
+.plate-date {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  color: var(--faint);
+  margin-top: 5px;
+}
+/* Hidden until a date is known, so undated plates show nothing rather than a gap. */
+.plate-date:empty { display: none; }
+
 /* Exhibition statement */
 .exh-meta { margin: 0 0 14px; color: var(--faint); }
 
